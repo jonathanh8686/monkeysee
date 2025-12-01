@@ -1,0 +1,26 @@
+version: "3.9"
+
+services:
+  api:
+    build:
+      context: ./monkeysee_api
+    container_name: monkeysee-api
+    ports:
+      - "8000:8000"
+    environment:
+      # e.g. DATABASE_URL=...
+      # CORS origin for web:
+      - CORS_ORIGINS=http://localhost:3000
+
+  web:
+    build:
+      context: ./monkeysee_web
+    container_name: monkeysee-web
+    ports:
+      - "3000:3000"
+    environment:
+      # point the frontend to the API inside Docker network
+      - NEXT_PUBLIC_API_BASE_URL=http://api:8000
+    depends_on:
+      - api
+

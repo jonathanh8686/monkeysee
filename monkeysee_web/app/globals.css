@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+:root {
+  --background: #000000;
+  --foreground: #f5f5f5;
+}
+
+body {
+  background: #000000;
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+}
+
+.dark-grid {
+  --ag-background-color: #000000;
+  --ag-foreground-color: #fafafa;
+  --ag-data-color: #fafafa;
+  --ag-border-color: #111111;
+  --ag-header-background-color: #000000;
+  --ag-header-foreground-color: #f5f5f5;
+  --ag-odd-row-background-color: #050505;
+  --ag-even-row-background-color: #050505;
+  --ag-row-hover-color: #101010;
+  --ag-selected-row-background-color: #151515;
+  --ag-checkbox-background-color: #000000;
+  --ag-checkbox-border-color: #333333;
+  --ag-input-border-color: #333333;
+}
+
+.dark-grid .ag-root-wrapper,
+.dark-grid .ag-root-wrapper-body,
+.dark-grid .ag-root,
+.dark-grid .ag-body-viewport,
+.dark-grid .ag-center-cols-viewport {
+  background-color: #000000 !important;
+}
+
+.dark-grid .ag-header,
+.dark-grid .ag-header-row,
+.dark-grid .ag-header-cell {
+  background-color: #000000 !important;
+}
+
+.dark-grid .ag-row,
+.dark-grid .ag-row-even,
+.dark-grid .ag-row-odd {
+  background-color: #050505 !important;
+}
+
+.dark-grid .ag-cell,
+.dark-grid .ag-cell-value,
+.dark-grid .ag-header-cell-text {
+  color: #fafafa !important;
+}
